@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Finance Tracker</h1>
+    <div class="tracker">
+      <div class="left-panel">
+        <div class="input-group">
+          <h3>Add Budget</h3>
+          <input type="number" id="budget-input" placeholder="Enter Budget" />
+          <button onclick="addBudget()">Add Budget</button>
+        </div>
+        <div class="input-group">
+          <h3>Add Expense</h3>
+          <input type="text" id="expense-title" placeholder="Expense Title" />
+          <input type="number" id="expense-amount" placeholder="Amount" />
+          <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <button class="reset-btn" onclick="resetAll()">Reset All</button>
+      </div>
+      <div class="right-panel">
+        <div class="summary">
+          <div class="box" id="total-budget">Total Budget: ₹0</div>
+          <div class="box" id="total-expense">Total Expenses: ₹0</div>
+          <div class="box" id="budget-left">Budget Left: ₹0</div>
+        </div>
+        <h3>Expense History</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Expense Name</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="expense-table-body">
+            <!-- Dynamic Rows Here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
