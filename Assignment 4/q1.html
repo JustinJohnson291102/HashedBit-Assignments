@@ -1,0 +1,53 @@
+<style>
+    .day {
+        background-color: white;
+        color: black;
+    }
+    
+    .night {
+        background-color: black;
+        color: gold;
+    }
+    
+    .night-button {
+        background-color: darkblue;
+        color: white;
+    }
+    
+    .day-button{
+        background-color: white;
+        color: black;
+    }
+    
+    html, body {
+        margin: 0px;
+        height: 100%;
+    }
+    
+    #app {
+        height: 100%;
+        padding: 10px;
+    }
+</style>
+
+<div id="app" class="day">
+    <p>I am a HashedBit student, ready to become an awesome full stack developer</p>
+    <button id="toggleButton" class="day-button">Switch Theme</button>
+</div>
+
+<script>
+    function toggleTheme() {
+        const appElement = document.getElementById("app");
+        const themeButton = document.getElementById("toggleButton");
+
+        if (appElement.classList.contains("day")) {
+            appElement.classList.replace("day", "night");
+            themeButton.classList.replace("day-button", "night-button");
+        } else {
+            appElement.classList.replace("night", "day");
+            themeButton.classList.replace("night-button", "day-button");
+        }
+    }
+
+    document.getElementById("toggleButton").addEventListener("click", toggleTheme);
+</script>

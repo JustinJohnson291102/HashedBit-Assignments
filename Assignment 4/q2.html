@@ -1,0 +1,27 @@
+<div id="container">
+</div>
+
+<script>
+function addNewDiv(width, height, content) {
+    const divElement = document.createElement("div");
+
+    // Set width and height with px unit
+    divElement.style.width = `${width}px`;
+    divElement.style.height = `${height}px`;
+
+    // Add text content to the new div
+    divElement.textContent = content;
+
+    // Find the container element and append the new div
+    const containerElement = document.getElementById("container");
+    containerElement.appendChild(divElement);
+}
+
+// Expose function to global scope if necessary
+window.addNewDiv = addNewDiv;
+
+window.onload = function() {
+    // Create a div on page load with specified width, height, and text
+    addNewDiv(250, 150, "A new div has been created on page load!");
+};
+</script>

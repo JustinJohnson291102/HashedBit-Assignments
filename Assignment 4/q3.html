@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility Example</title>
+</head>
+<body>
+    <h1>This is a headline created with HTML</h1>
+    <br />
+    <p id="extra-paragraph">This is an extra paragraph that you might not need to see all the time.</p>
+    <br />
+    <button id="toggleButton">Show/Hide Paragraph</button>
+
+    <script>
+        function toggleParagraphVisibility() {
+            const paragraphElement = document.getElementById("extra-paragraph");
+
+            // Check the current display status of the paragraph
+            if (paragraphElement.style.display === "none") {
+                paragraphElement.style.display = "block"; // Show the paragraph
+            } else {
+                paragraphElement.style.display = "none"; // Hide the paragraph
+            }
+        }
+
+        // Attach the event listener to the button
+        document.getElementById("toggleButton").addEventListener("click", toggleParagraphVisibility);
+    </script>
+</body>
+</html>
