@@ -1,0 +1,40 @@
+/* Reset default margins and paddings */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212; /* Dark background for aesthetic theme */
+  color: #FFD700; /* Gold text color */
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for links (global) */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #FFD700; /* Highlighted gold on hover */
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
